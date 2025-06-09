@@ -38,22 +38,29 @@
                 <StackPanel Height="400"
                             Width="228">
                     <!--// Home //-->
-
                     <Menu:Btn Style="{StaticResource BtnStyle}"
                               Command="{Binding HomeCommand}"
                               IsChecked="True">
-
                         <Grid>
-
                             <Image Source="/Assets/img_home.png"
                                    Style="{StaticResource Image_Style}" />
-
                             <TextBlock Text="Домой"
                                        Style="{StaticResource Text_Style}" />
-
                         </Grid>
-
                     </Menu:Btn>
+                    
+                    <!--// Author //-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding AuthorCommand}"
+                       IsChecked="False">
+                        <Grid>
+                            <Image Source="/Assets/img_customer.png"
+                                Style="{StaticResource Image_Style}" />
+                            <TextBlock Text="Автор"
+                                Style="{StaticResource Text_Style}" />
+                        </Grid>
+                    </Menu:Btn>
+                    
                 </StackPanel>
 
             </Grid>
