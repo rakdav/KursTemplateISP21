@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KursProjectISP31.View"
         xmlns:vm="clr-namespace:KursProjectISP31.ViewModel"
         mc:Ignorable="d"
-        Title="Добавление автора" Height="650" Width="400">
+        Title="Добавление автора" Height="450" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -17,12 +17,13 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Text="{Binding Surname}" Grid.Row="0" Margin="10 30"/>
-        <TextBox Text="{Binding FirstName}" Grid.Row="1" Margin="10 30"/>
-        <TextBox Text="{Binding LastName}" Grid.Row="2" Margin="10 30"/>
-        <TextBox Text="{Binding Address}" Grid.Row="3" Margin="10 30"/>
-        <TextBox Text="{Binding Phone}" Grid.Row="4" Margin="10 30"/>
-        <TextBox Text="{Binding AdditionalInformation}" Grid.Row="5" Margin="10 30"/>
+        <TextBox Text="{Binding Surname}" Grid.Row="0" Margin="10 15"
+                 Tag="Введите фамилию" Style="{StaticResource PlaceholderTextBoxStyle}"/>
+        <TextBox Text="{Binding FirstName}" Grid.Row="1" Margin="10 15"/>
+        <TextBox Text="{Binding LastName}" Grid.Row="2" Margin="10 15"/>
+        <TextBox Text="{Binding Address}" Grid.Row="3" Margin="10 15"/>
+        <TextBox Text="{Binding Phone}" Grid.Row="4" Margin="10 15"/>
+        <TextBox Text="{Binding AdditionalInformation}" Grid.Row="5" Margin="10 15"/>
         <Grid Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
