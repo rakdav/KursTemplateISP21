@@ -17,6 +17,18 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Фамилия" Width="Auto" Binding="{Binding Surname}"/>
                     <DataGridTextColumn Header="Имя" Width="Auto" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Отчество" Width="Auto" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Header="Адрес" Width="Auto" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Телефон" Width="Auto" Binding="{Binding Address}"/>
+                    <DataGridTemplateColumn Width="Auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Content="..." Width="20" Height="20"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
