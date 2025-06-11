@@ -9,6 +9,8 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5"
+                        Margin="10 15"
                         SnapsToDevicePixels="True">
                         <Grid>
                             <ScrollViewer x:Name="PART_ContentHost" />
