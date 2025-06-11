@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\add.png" />
     <None Remove="Assets\block.png" />
     <None Remove="Assets\home_page.png" />
     <None Remove="Assets\img_customer.png" />
@@ -39,6 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\add.png" />
     <Resource Include="Assets\block.png" />
     <Resource Include="Assets\home_page.png" />
     <Resource Include="Assets\img_customer.png" />
