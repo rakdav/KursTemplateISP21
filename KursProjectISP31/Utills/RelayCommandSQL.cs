@@ -9,20 +9,29 @@ namespace KursProjectISP31.Utills
 {
     public class RelayCommandSQL:ICommand
     {
-        public event EventHandler CanExecuteChanged;
+        private Action<object> execute;
+        private Func<object, bool> canExecute;
 
-        private Action DoWork;
-        public RelayCommandSQL(Action work)
+        public event EventHandler CanExecuteChanged
         {
-            DoWork = work;
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
         }
+
+        public RelayCommandSQL(Action<object> execute, Func<object, bool> canExecute = null)
+        {
+            this.execute = execute;
+            this.canExecute = canExecute;
+        }
+
         public bool CanExecute(object parameter)
         {
-            return true;
+            return this.canExecute == null || this.canExecute(parameter);
         }
+
         public void Execute(object parameter)
         {
-            DoWork();
+            this.execute(parameter);
         }
     }
 }

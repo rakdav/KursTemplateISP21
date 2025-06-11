@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KursProjectISP31.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,22 @@ namespace KursProjectISP31.View
     /// </summary>
     public partial class AuthorWindow : Window
     {
-        public AuthorWindow()
+        public Author Author { get; set; }
+        public AuthorWindow(Author author)
         {
             InitializeComponent();
+            Author = author;
+            DataContext = Author;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }
